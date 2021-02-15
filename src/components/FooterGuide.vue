@@ -35,25 +35,26 @@ export default {
   @import "../common/stylus/mixins.styl"
 
   .guider
-    width 100%
-    height 50px
     top-border-1px(#cccccc)
-    position fixed
-    bottom 0
-    left 0
     display flex
+    position fixed
+    left 0
+    bottom 0
+    height 50px
+    width 100%
+    background #fff
     .guider-item
-      width 25%
-      margin-top 5px
-      font-size 14px
       display flex
       flex-direction column
       text-align center
+      width 25%
       &.on
         color $green
       span
+        margin-top 3px
+        font-size 12px
         i
-          font-size 24px
+          font-size 22px
       
       
         
