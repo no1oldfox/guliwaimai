@@ -2,7 +2,7 @@
   <div>
     <section class="profile">
       <Header title="个人中心"></Header>
-      <section class="profile-number">
+      <section class="profile-number" @click="toLogin">
         <a href="javascript:" class="profile-link">
           <div class="profile_image">
             <i class="iconfont icon-person"></i>
@@ -95,7 +95,11 @@
 
 <script>
 export default {
- 
+ methods:{
+  toLogin(){
+    this.$router.push('/login')
+  }
+ }
 }
 </script>
 

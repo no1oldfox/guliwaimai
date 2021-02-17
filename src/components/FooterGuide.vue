@@ -1,5 +1,5 @@
 <template>
-  <div class="guider">
+  <div class="guider" v-show="$route.meta.isShowFooterGuider">
     <div class="guider-item " :class="{on:$route.path==='/msite'}" @click="goto('/msite')">
       <span><i class="iconfont icon-waimai"></i></span>
       <span>外卖</span>
@@ -23,9 +23,17 @@
 <script>
 export default {
  name:'FooterGuide',
+  mounted(){
+   
+ },
  methods:{
    goto(path){
-     this.$router.replace(path)
+     if(path===this.$route.path){
+       window.location = path
+     }else{
+       this.$router.replace(path)
+     }
+     
    }
  }
 }

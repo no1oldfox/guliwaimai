@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import {} from 'vuex'
 export default {
   name: 'Header',
   props:{
@@ -26,6 +27,9 @@ export default {
   methods: {
     
   },
+  computed:{
+    
+  }
 };
 </script>
 
